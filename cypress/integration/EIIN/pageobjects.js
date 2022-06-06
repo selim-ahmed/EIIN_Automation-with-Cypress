@@ -23,9 +23,9 @@ export class applicantUser{
 
     EIINapplication(){
 
-        cy.get(':nth-child(3) > .accordion-item > .d-flex > :nth-child(1) > .sidebar-text').click()
+        cy.xpath("//span[contains(text(),'EIIN Applications')]").click()
         cy.wait(3000)
-        cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(2) > .nav-link > :nth-child(1) > .sidebar-text').click()
+        cy.xpath("//body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]").click()
           
         
         //cy.get('div.dropdown', {timeout:10000}).contains('Admin').click()

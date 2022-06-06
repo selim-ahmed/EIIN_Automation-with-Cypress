@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="cypress-xpath" />
 
 import {applicantUser} from "./pageobjects"
 
