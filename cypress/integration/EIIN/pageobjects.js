@@ -24,16 +24,15 @@ export class applicantUser{
     EIINapplication(){
 
         cy.get(':nth-child(3) > .accordion-item > .d-flex > :nth-child(1) > .sidebar-text').click()
-        //cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text').trigger('mouseover')
         cy.wait(3000)
-        cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text', {timeout: 5000}).contains('Apply For EIIN').click()
+        cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(2) > .nav-link > :nth-child(1) > .sidebar-text').click()
+          
         
         //cy.get('div.dropdown', {timeout:10000}).contains('Admin').click()
+        //cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text', {timeout:3000}).contains('Apply For EIIN').should('be.visible')
+        //cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text').click({ force: true })
+        //cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text').contains('Apply For EIIN').click({ force: true })
 
-        //cy.get('div.subdropdown', {timeout:10000}).contains('Catalog Admin').should('be.visible')
-
-        //cy.get('div.subdropdown').contains('Catalog Admin').click({ force: true })
-     
     }
 
     address(division){
