@@ -19,12 +19,12 @@ export class userRegister{
         cy.wait(3000) 
     }
 
-    createAccount(name, nameBN, DOB, mobile, email, address, instituteName, instituteNameBN, designation, username, pass)
+    createAccount(name, nameBN, DOB, dobValue, mobile, email, address, instituteName, instituteNameBN, designation, username, pass)
     {
 
         cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter Full Name']").type(name)
         cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter Full Name (Bn)']").type(nameBN)
-        //cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter Date Of Birth']").type(DOB)
+        cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter Date Of Birth']").type(DOB).should("have.value", dobValue)
         //cy.xpath("//input[@placeholder='Enter Phone Number']").type(phone)
         cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter Mobile Number']").type(mobile)
         cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter Email']").type(email)
@@ -35,8 +35,15 @@ export class userRegister{
         cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter User Name']").type(username)
         cy.xpath("//div[@class='col-md-6']//input[@placeholder='Enter Password']").type(pass)
         cy.xpath("//div[@class='col-md-6']//input[@placeholder='Confirm Password']").type(pass)
+        
+        
         //fileUpload
-        //cy.xpath("//div[@class='col-md-6']//input[@id='photoUrl']").attachFile("image/images2-female.jpg")
+        const imagePath = "images1.jpg"
+        cy.xpath("//div[@class='col-md-6']//input[@id='photoUrl']").attachFile(imagePath)
+        
+        
+        
+        //cy.xpath("//div[@class='col-md-6']//img[@id='preview-image']").contains("picture")
         //cy.xpath("//div[@class='web-version row']//button[@type='submit'][normalize-space()='Register']").click()
   
           

@@ -4,33 +4,34 @@ import {userRegister} from "./registrationPageObject"
 
 const registration = new userRegister()
 
-it('EIIN_app', ()=> {
+it('Navigate', ()=> {
 
     registration.navigate()
 
 })
 
 
-it('EIIN_app', ()=> {
+it('Apply for EIIN', ()=> {
 
     registration.applyForEIIN()
 
 })
 
 
-it('EIIN_app', ()=> {
+it('Registration', ()=> {
 
     registration.register()
 
 })
 
 
-it('EIIN_app', ()=> {
+it('Create Account', ()=> {
 
     registration.createAccount(
         'Saila Akhter', 
-        'সায়লা আক্তার', 
-        '12-10-1999', 
+        'সায়লা আক্তার',
+        '1999-12-10', 
+        '1999-12-10', 
         '01575431922', 
         'mphss08@yahoo.com', 
         '73/C Block# D, Asad Avenue, 1 Iqbal Road, Dhaka 1207', 
