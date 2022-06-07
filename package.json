@@ -10,7 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^9.6.1",
     "cypress-xpath": "^1.6.2"
-  }
+  },
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selim-ahmed/EIIN_Automation-with-Cypress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/selim-ahmed/EIIN_Automation-with-Cypress/issues"
+  },
+  "homepage": "https://github.com/selim-ahmed/EIIN_Automation-with-Cypress#readme"
 }
