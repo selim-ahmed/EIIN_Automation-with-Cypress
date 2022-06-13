@@ -1,15 +1,18 @@
 /// <reference types="cypress-xpath" />
 
 import {applicantUser} from "./pageobjects"
+//import * as applicantUser from '../EIIN/pageobjects'
 
 const applicantuser = new applicantUser()
 
+// beforeEach(() =>{
+//   applicantuser.navigate()
+// })
+  
 
-    it('EIIN_app', ()=> {
-
-        applicantuser.navigate()
-
-    })
+it('EIIN_app', ()=> {
+    applicantuser.navigate()
+  })
 
     //Apply for EIIN
   it('Apply for EIIN', () => {
@@ -32,22 +35,7 @@ const applicantuser = new applicantUser()
     
   })
 
-   
-  // //Basic Information
-  // it('Basic Information of EIIN Application', () => {
-
-  //   applicantuser.basicInfo('Jugipara School-4','জুগিপাড়া স্কুল-4')
+  // it('EIIN Application Address', () => {
+  //   applicantuser.address('4')
     
   // })
-   
-     //Address
-  //it('Address', () => {  
-
-    // applicantuser.address('4')
-
-    // applicantuser.address(8,60,492,7017,56942,496,
-    //   'The school was established in 1832 as Rangpur Zamindar School,by the local Zaminders or landlords.')
-    //,'Dhaka','Mohammadpur','WARD NO-32 (45)','BABAR ROAD','Mohammadpur Housing - 1207',
-    //'The school was established in 1832 as Rangpur Zamindar School,by the local Zaminders or landlords.'
-
-  //})  

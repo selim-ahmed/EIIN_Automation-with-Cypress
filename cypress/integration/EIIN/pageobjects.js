@@ -25,7 +25,17 @@ export class applicantUser{
 
         cy.xpath("//span[contains(text(),'EIIN Applications')]").click()
         cy.wait(3000)
-        cy.xpath("//body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]").click()
+        cy.xpath("//span[contains(text(),'Apply for EIIN')]").click()
+        cy.wait(5000)
+        
+       
+        // cy.get(':nth-child(3) > .accordion-item > .d-flex > :nth-child(1) > .sidebar-text').click()
+        // cy.wait(5000)
+        // cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text').trigger('click')
+        // cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text').click()
+        
+        //cy.contains('Apply for EIIN').click({force:true})
+        //cy.url().should('include', 'http://103.4.145.251:3005/portal/institute-application/apply') 
           
         
         //cy.get('div.dropdown', {timeout:10000}).contains('Admin').click()
@@ -37,7 +47,19 @@ export class applicantUser{
 
     address(division){
 
-       cy.get(':nth-child(5) > :nth-child(1) > .form-control').select(division).should('have.value', division)
+       cy.xpath("//select[contains(@name,'divisionId')]").select(division).should('have.value', division)
+       cy.xpath("//select[@name='districtId']").select()
+       cy.xpath("//select[@name='thanaId']").select()
+       cy.xpath("//select[@name='unionId']").select()
+       cy.xpath("//select[@name='mouzaId']").select()
+       cy.xpath("//select[@name='postOfficeId']").select()
+       cy.xpath("//textarea[@name='address']").select()
+       cy.xpath("").select()
+       cy.xpath("").select()
+       cy.xpath("").select()
+       cy.xpath("").select()
+       cy.xpath("").select()
+       cy.xpath("").select()
         
         
         
@@ -50,50 +72,47 @@ export class applicantUser{
         
     }
 
-    // contactInfo(telephone, mobile, alternateMobile, fax, email, website){
-    //     cy.get(':nth-child(13) > .form-control').type(telephone)
-    //     cy.get(':nth-child(14) > .form-control').type(mobile)
-    //     cy.get(':nth-child(15) > .form-control').type(alternateMobile)
-    //     cy.get(':nth-child(16) > .form-control').type(fax)
-    //     cy.get(':nth-child(17) > .form-control').type(email)
-    //     cy.get(':nth-child(18) > .form-control').type(website)
+    contactInfo(){
         
-    // }
+       cy.xpath("//input[@placeholder='Enter Telephone']").select()
+       cy.xpath("//input[@placeholder='Enter Telephone']").select()
+       cy.xpath("//input[@placeholder='Enter Alternate Mobile']").select()
+       cy.xpath("//input[@placeholder='Enter Fax']").select()
+       cy.xpath("//input[@placeholder='Enter Email']").select()
+       cy.xpath("//input[@placeholder='Enter WebSite']").select()
+       cy.xpath("//input[@placeholder='Enter WebSite']").select()
+       cy.xpath("//input[@placeholder='Enter WebSite']").select()
+       cy.xpath("//input[@placeholder='Enter WebSite']").select()
+       cy.xpath("//input[@placeholder='Enter WebSite']").select()
+       
 
-    // instituteInfo(
-    //     instituteType, 
-    //     InstituteForWhome, 
-    //     NoOfShift, 
-    //     constituency,
-    //     management, 
-    //     areaStatus, 
-    //     geoPosition, 
-    //     region,
-    //     dagNo, 
-    //     totalLand, 
-    //     latitude, 
-    //     longitude){
-    //     cy.get(':nth-child(20) > :nth-child(1) > .form-control').select(instituteType).should('have.value' ,instituteType)
-    //     cy.get(':nth-child(21) > :nth-child(1) > .form-control').select(InstituteForWhome).should('have.value' ,InstituteForWhome)
-    //     cy.get(':nth-child(22) > .form-control').type(NoOfShift)
-    //     cy.get('label.ml-5 > input').first().check()
-    //     cy.get(':nth-child(24) > :nth-child(1) > .form-control').select(constituency).should('have.value', constituency)
-    //     cy.get(':nth-child(25) > :nth-child(1) > .form-control').select(management).should('have.value', management)
-    //     cy.get(':nth-child(26) > :nth-child(1) > .form-control').select(areaStatus).should('have.value' , areaStatus)
-    //     cy.get(':nth-child(27) > :nth-child(1) > .form-control').select(geoPosition).should('have.value', geoPosition)
-    //     cy.get(':nth-child(28) > :nth-child(1) > .form-control').select(region).should('have.value' ,region)
-    //     cy.get(':nth-child(29) > .form-control').type(dagNo)
-    //     cy.get(':nth-child(30) > .form-control').type(totalLand)
-    //     cy.get(':nth-child(31) > .form-control').type(latitude)
-    //     cy.get(':nth-child(32) > .form-control').type(longitude)
-        
-    // }
+    }
 
-    // saveToNext(){
-    //     // cy.get('.mb-10 > .f-right').click()
-    //     cy.contains('Save & Next').click();
-        
-    // }
-    
-    
+   instituteInfo(){
+
+        cy.xpath("//select[@name='instituteTypeId']").select()
+        cy.xpath("//select[@name='instituteForWhomId']").select()
+        cy.xpath("//input[@placeholder='Enter Number Of Shift']").select()
+        //Radio button (Institute has english version?)
+        cy.xpath("//select[contains(@name,'constituencyId')]").select()
+        cy.xpath("//select[@name='managementId']").select()
+        cy.xpath("//select[@name='managementId']").select()
+        cy.xpath("//select[@name='geographicalPositionId']").select()
+        cy.xpath("//select[@name='regionId']").select()
+        cy.xpath("//input[@placeholder='Enter Dag No']").select()
+        cy.xpath("//input[@placeholder='Enter Total Land Area']").select()
+        cy.xpath("//input[@placeholder='Enter Latitude']").select()
+        cy.xpath("//input[@placeholder='Enter Longitude']").select()
+        //Save & Next Button
+        //cy.xpath("//button[@type='submit']").click()
+       
+    }
+
 }
+
+
+
+// Some usefull commands.
+// cy.get('.new-todo', {timeout:6000}).type("clear room{enter}")    ---type aspecific text and hit enter
+// cy.get('label').should('have.text', 'clear room')     --  validate content
+// cy.contains('Clear Completed').click()
