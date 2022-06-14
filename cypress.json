@@ -1,6 +1,11 @@
 {
 
     "watchForFileChanges": false,
-    "defaultCommandTimeout": 5000
+    "defaultCommandTimeout": 5000,
+    "baseUrl": "http://103.4.145.251:3005/",
+
+    "env": {
+        "MY_ENV_VARIABLE": " "
+    }
 
 }

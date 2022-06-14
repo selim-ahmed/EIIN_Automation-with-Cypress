@@ -11,29 +11,33 @@ const applicantuser = new applicantUser()
   
 
 it('EIIN_app', ()=> {
-    applicantuser.navigate()
-  })
+  applicantuser.navigate()
+
+})
 
     //Apply for EIIN
-  it('Apply for EIIN', () => {
+it('Apply for EIIN', () => {
    
    
-    applicantuser.applyForEIIN()
+  applicantuser.applyForEIIN()
      
-  })
+})
  
  //login
- it('Login EIIN', () => {
+it('Login EIIN', () => {
    
-    applicantuser.login('mhossain','hossain')
+  applicantuser.login('mhossain','hossain')
 
-  })
+})
+
+  
 
   //EIIN Application
-  it('EIIN Application', () => {
-    applicantuser.EIINapplication()
+it('EIIN Application', () => {
+  
+  applicantuser.EIINapplication()
     
-  })
+})
 
   // it('EIIN Application Address', () => {
   //   applicantuser.address('4')

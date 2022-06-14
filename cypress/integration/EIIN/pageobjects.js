@@ -21,11 +21,18 @@ export class applicantUser{
         cy.wait(3000) 
     }
 
+    
+
     EIINapplication(){
 
         cy.xpath("//span[contains(text(),'EIIN Applications')]").click()
         cy.wait(3000)
-        cy.xpath("//span[contains(text(),'Apply for EIIN')]").click()
+        cy.xpath("//span[contains(text(),'Apply for EIIN')]").invoke('show')
+        //cy.xpath("//span[contains(text(),'Apply for EIIN')]").invoke('show')
+        cy.contains('Apply for EIIN').click({force: true})
+        //cy.eq('1')
+        cy.xpath("//span[contains(text(),'Apply for EIIN')]").click({force:true})
+        //cy.xpath("//span[contains(text(),'Apply for EIIN')]").click()
         cy.wait(5000)
         
        
