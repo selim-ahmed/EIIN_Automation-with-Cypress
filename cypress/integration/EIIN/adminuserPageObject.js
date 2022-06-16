@@ -19,13 +19,13 @@ export class adminUser{
     EIINApplications(){
 
         cy.xpath("//span[contains(text(),'EIIN Applications')]").click()
-        cy.wait(2000)
-        cy.xpath("//a[contains(@href,'/portal/review-institute-application/pending')]//span//span[contains(@class,'sidebar-text')][normalize-space()='Applications Under Review']").click()
-        cy.wait(5000)
+        cy.wait(3000)
+        cy.xpath("//a[contains(@href,'/portal/review-institute-application/pending')]//span//span[contains(@class,'sidebar-text')][normalize-space()='Applications Under Review']").invoke('show')
+        cy.contains('Applications Under Review').click({force: true})
+        cy.xpath("//a[contains(@href,'/portal/review-institute-application/pending')]//span//span[contains(@class,'sidebar-text')][normalize-space()='Applications Under Review']").click({force:true})
+        cy.wait(3000)
 
+       
     }
-
-
-
 
 }

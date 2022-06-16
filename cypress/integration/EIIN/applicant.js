@@ -35,11 +35,10 @@ it('Login EIIN', () => {
   //EIIN Application
 it('EIIN Application', () => {
   
-  applicantuser.EIINapplication()
+  applicantuser.EIINapplication("6","46", "43", "555", "3441", "383", "33/1, Ka, Nur Maszid Lane, Shamoly, Dhaka",
+   "22012456", "+8801712454635", "+8801552556688", "5656266", "fakemail@gmail.com", "https://www.shamolischool.com", 
+   "3", "4","2", "19", "4", "2", "2", "4", "1245", "2.36", "13.0548", "51.2784"
+  
+  )
     
 })
-
-  // it('EIIN Application Address', () => {
-  //   applicantuser.address('4')
-    
-  // })
