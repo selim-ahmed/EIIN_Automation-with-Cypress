@@ -54,8 +54,4 @@ export class userRegister{
         //cy.get(':nth-child(3) > .accordion-item > .accordion-collapse > .multi-level > .flex-column > :nth-child(1) > .nav-link > :nth-child(1) > .sidebar-text').contains('Apply For EIIN').click({ force: true })
 
     }
-
-   
-    
-    
 }

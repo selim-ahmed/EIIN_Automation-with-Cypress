@@ -80,8 +80,35 @@ export class applicantUser{
 
 
         //Save & Next Button
-        //cy.xpath("//button[@type='submit']").click()
+        cy.xpath("//button[@type='submit']").click()
     
+    }
+
+    Submitted_application(){
+        cy.xpath("//span[contains(text(),'EIIN Applications')]").click()
+        cy.wait(3000)
+        cy.xpath("//span[contains(text(),'Submitted Applications')]").invoke('show')
+        cy.contains('Submitted Applications').click({force: true})
+        cy.xpath("//span[contains(text(),'Submitted Applications')]").click({force:true})
+        cy.wait(3000)
+    }
+    
+    draft_application(){
+        cy.xpath("//span[contains(text(),'EIIN Applications')]").click()
+        cy.wait(3000)
+        cy.xpath("//span[contains(text(),'Draft Applications')]").invoke('show')
+        cy.contains('Draft Applications').click({force: true})
+        cy.xpath("//span[contains(text(),'Draft Applications')]").click({force:true})
+        cy.wait(3000)
+    }
+    
+    educationLevelMigration(){
+        cy.xpath("//span[contains(text(),'Education Level Migration')]").click()
+        cy.wait(3000)
+        cy.xpath("//span[contains(text(),'Apply for Migration')]").invoke('show')
+        cy.contains('Apply for Migration').click({force: true})
+        cy.xpath("//span[contains(text(),'Apply for Migration')]").click({force:true})
+        cy.wait(3000)
     }
 
 }
