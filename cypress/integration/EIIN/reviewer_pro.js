@@ -25,11 +25,18 @@ it('Login as a Banbeis Programmer', () => {
       
 })  
 
-it('Pending Applications', () => {
+
+it('Institute Registration', () => {
          
-    reviewer_pro.pendingApplications()
+    reviewer_pro.instituteRegistration("akkas")
 
 }) 
+
+// it('Pending Applications', () => {
+         
+//     reviewer_pro.pendingApplications()
+
+// }) 
 
      
 

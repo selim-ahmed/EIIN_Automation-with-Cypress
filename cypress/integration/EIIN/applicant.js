@@ -33,7 +33,7 @@ it('Login EIIN', () => {
   
 
   //EIIN Application
-it.skip('EIIN Application', () => {
+it('EIIN Application', () => {
   
   applicantuser.EIINapplication("6","46", "43", "555", "3441", "383", "GOSAIBARI, DHUNAT, BOGRA, DHUNAT - 5851",
    "22012456", "+8801712454635", "+8801552556688", "5656266", "fakemail@gmail.com", "https://www.shamolischool.com", 
@@ -44,22 +44,22 @@ it.skip('EIIN Application', () => {
 })
 
  //Submitted Applications
- it('Submitted application list', () => {
+// it('Submitted application list', () => {
    
-  applicantuser.Submitted_application()
+//   applicantuser.Submitted_application()
 
-})
+// })
 
-//Draft Applications
-it('Draft application list', () => {
+// //Draft Applications
+// it('Draft application list', () => {
    
-  applicantuser.draft_application()
+//   applicantuser.draft_application()
 
-})
+// })
 
-//Educatin Level Migation
-it('Educatin Level Migation', () => {
+// //Educatin Level Migation
+// it('Educatin Level Migation', () => {
    
-  applicantuser.educationLevelMigration()
+//   applicantuser.educationLevelMigration()
 
-})
+// })

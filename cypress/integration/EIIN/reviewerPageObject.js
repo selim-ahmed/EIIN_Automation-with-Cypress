@@ -20,6 +20,22 @@ export class reviewer{
         cy.wait(3000) 
     }
 
+    instituteRegistration(search_institute_registration){
+        
+        cy.xpath("//span[contains(text(),'Institute Registrations')]").click()
+        cy.wait(3000)
+        cy.xpath("//span[contains(text(),'Registrations Under Review')]").invoke('show')
+        cy.contains('Registrations Under Review').click({force: true})
+        cy.xpath("//span[contains(text(),'Registrations Under Review')]").click({force:true})
+        cy.wait(3000)
+        cy.xpath("//input[contains(@placeholder,'Search')]").type(search_institute_registration).type('{enter}')
+        cy.wait(2000)
+        cy.xpath("//button[@class='btn btn-color']").click()
+        cy.wait(7000)
+        cy.xpath("//button[normalize-space()='Send Forward']").click()
+
+    }
+    
     pendingApplications(){
         
         cy.xpath("//span[contains(text(),'EIIN Applications')]").click()
